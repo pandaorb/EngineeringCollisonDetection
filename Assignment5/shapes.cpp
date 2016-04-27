@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "shapes.h"
 #include <cstdlib>
+#include "Polygon.h"
 
 /*
 *	Draws a square.
@@ -54,4 +55,7 @@ void drawPolygon(tuple points, float ratio, int a, int b, int c, int d)
 	glNormal3f(points[d][FIRST_ELEMENT] / ratio, points[d][SECOND_ELEMENT] / ratio, points[d][THIRD_ELEMENT] / ratio);
 	glVertex3f(points[d][FIRST_ELEMENT] / ratio, points[d][SECOND_ELEMENT] / ratio, points[d][THIRD_ELEMENT] / ratio);
 	glEnd();
+
+	/* Create new polygon and add to list */
+	Polygon newPoly = Polygon(points);
 }

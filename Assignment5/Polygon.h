@@ -6,7 +6,7 @@
 const int NUM_VERTICIES = 4;
 const int NUM_POINTS = 3;
 
-/* Four vertexed polygon */
+/* A 2D polygon */
 class Polygon
 {
 public:
@@ -22,6 +22,7 @@ private:
 	float zMax;
 
 public:
+	Polygon();
 	Polygon(float points[][NUM_POINTS]);
 
 private:

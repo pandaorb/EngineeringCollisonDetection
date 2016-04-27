@@ -6,8 +6,14 @@
 #include "Polygon.h"
 #include <vector>
 
+std::vector<Polygon> Polygon::existingPolygons = std::vector<Polygon>();
 
 /* Fancy Constructor */
+Polygon::Polygon(void)
+{
+	// Default constructor
+}
+
 Polygon::Polygon(float points[][3])
 {
 	for (int i = 0; i < NUM_VERTICIES; i++)
@@ -18,6 +24,7 @@ Polygon::Polygon(float points[][3])
 		}
 	}
 	calculateMinAndMax();
+	existingPolygons.push_back(*this);
 }
 
 /* sets min and max for x, y, and z verticies */

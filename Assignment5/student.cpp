@@ -2,6 +2,7 @@
 #include <GL/glut.h>
 #include "student.h"
 #include <stdlib.h>
+#include "shapes.h"
 
 /*
 * Modification of Dr. Chang's polygon function generates a head
@@ -26,7 +27,7 @@ void drawHead(int a, int b, int c, int d)
 	glColor4f(studentColor[0], studentColor[1], studentColor[2], 1.0);
 
 	float ratio = 5.0;
-	createPolygons(head, ratio, a, b, c, d);
+	drawPolygon(head, ratio, a, b, c, d);
 }
 
 /*
@@ -48,7 +49,7 @@ void drawBody(int a, int b, int c, int d)
 
 	glColor4f(1.0, 0.0, 0.0, 0.0);
 	float ratio = 3.0;
-	createPolygons(body1, ratio, a, b, c, d);
+	drawPolygon(body1, ratio, a, b, c, d);
 }
 
 /*
@@ -80,8 +81,8 @@ void drawLegs(int a, int b, int c, int d)
 
 	glColor4f(0.0, 0.0, 1.0, 1.0);
 	float ratio = 7.0;
-	createPolygons(rightLeg, ratio, a, b, c, d);
-	createPolygons(leftLeg, ratio, a, b, c, d);
+	drawPolygon(rightLeg, ratio, a, b, c, d);
+	drawPolygon(leftLeg, ratio, a, b, c, d);
 }
 
 /*
@@ -113,8 +114,8 @@ void drawArms(int a, int b, int c, int d)
 
 	glColor4f(0.0, 1.0, 1.0, 1.0);
 	float ratio = 8.0;
-	createPolygons(rightArm, ratio, a, b, c, d);
-	createPolygons(leftArm, ratio, a, b, c, d);
+	drawPolygon(rightArm, ratio, a, b, c, d);
+	drawPolygon(leftArm, ratio, a, b, c, d);
 }
 
 /*
@@ -139,7 +140,7 @@ void drawBackpack(int a, int b, int c, int d)
 	/* draw a polygon via list of vertices */
 	glColor4f(0.5, 0.0, 0.5, 1.0);
 	float ratio = 4.0;
-	createPolygons(backpack, ratio, a, b, c, d);
+	drawPolygon(backpack, ratio, a, b, c, d);
 }
 
 /*
@@ -167,37 +168,8 @@ void drawCoffee(int a, int b, int c, int d)
 	/* draw a polygon via list of vertices */
 	glColor4f(1.0, 1.0, 1.0, 1.0);
 	float ratio = 10.0;
-	createPolygons(coffee, ratio, a, b, c, d);
+	drawPolygon(coffee, ratio, a, b, c, d);
 }
-
-/*
-*Abstraction of Dr.Chang's polygon function generates a four sided
-* polygon based on the coordinates defined in local arrays.
-* @args		points - the array of points for the polygon
-*			ratio - the number to divide the size of the cube by
-*			a - first index of the ordered pair to be accessed
-*			b - second index of the ordered pair to be accessed
-*			c - third index of the ordered pair to be accessed
-*			d - fourth index of the ordered pair to be accessed
-* @return void
-*/
-void createPolygons(GLfloat points[][3], float ratio, int a, int b, int c, int d)
-{
-	glBegin(GL_POLYGON);
-	glNormal3f(points[a][FIRST_ELEMENT] / ratio, points[a][SECOND_ELEMENT] / ratio, points[a][THIRD_ELEMENT] / ratio);
-	glVertex3f(points[a][FIRST_ELEMENT] / ratio, points[a][SECOND_ELEMENT] / ratio, points[a][THIRD_ELEMENT] / ratio);
-
-	glNormal3f(points[b][FIRST_ELEMENT] / ratio, points[b][SECOND_ELEMENT] / ratio, points[b][THIRD_ELEMENT] / ratio);
-	glVertex3f(points[b][FIRST_ELEMENT] / ratio, points[b][SECOND_ELEMENT] / ratio, points[b][THIRD_ELEMENT] / ratio);
-
-	glNormal3f(points[c][FIRST_ELEMENT] / ratio, points[c][SECOND_ELEMENT] / ratio, points[c][THIRD_ELEMENT] / ratio);
-	glVertex3f(points[c][FIRST_ELEMENT] / ratio, points[c][SECOND_ELEMENT] / ratio, points[c][THIRD_ELEMENT] / ratio);
-
-	glNormal3f(points[d][FIRST_ELEMENT] / ratio, points[d][SECOND_ELEMENT] / ratio, points[d][THIRD_ELEMENT] / ratio);
-	glVertex3f(points[d][FIRST_ELEMENT] / ratio, points[d][SECOND_ELEMENT] / ratio, points[d][THIRD_ELEMENT] / ratio);
-	glEnd();
-}
-
 
 /*
 * Modification of Dr. Chang's createcube function

@@ -2,7 +2,6 @@ c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assi
 c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\vc120.pdb
 c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\vc120.idb
 c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\stdafx.obj
-c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\animation.obj
 c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\broun.obj
 c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\buildings.obj
 c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\davis.obj
@@ -12,6 +11,7 @@ c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assi
 c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\l.obj
 c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\main.obj
 c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\people.obj
+c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\polygon.obj
 c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\ramsay.obj
 c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\ross.obj
 c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\shapes.obj
@@ -22,12 +22,15 @@ c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assi
 c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\wiggins.obj
 c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\wilmore.obj
 c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\woltosz.obj
-c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\debug\assignment5.ilk
-c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\debug\assignment5.exe
+c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\animation.obj
 c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\debug\assignment5.pdb
 c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\assignment5.tlog\cl.command.1.tlog
 c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\assignment5.tlog\cl.read.1.tlog
 c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\assignment5.tlog\cl.write.1.tlog
+c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\assignment5.tlog\link-cvtres.read.1.tlog
+c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\assignment5.tlog\link-cvtres.write.1.tlog
+c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\assignment5.tlog\link-rc.read.1.tlog
+c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\assignment5.tlog\link-rc.write.1.tlog
 c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\assignment5.tlog\link.command.1.tlog
 c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\assignment5.tlog\link.read.1.tlog
 c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\debug\assignment5.tlog\link.write.1.tlog
