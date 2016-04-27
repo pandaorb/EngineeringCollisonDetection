@@ -19,14 +19,16 @@
 * Collision Avoidance not really working. Although I'm sure my logic is flawless.  (o_o)
 * (Mostly located in Polygon.cpp, but some intersection checking occurs in		 //(   )\\
 *  animation.cpp as well.) Maintains a list of existing polygons and calculates	    //\\
-*  their areas of intersection.
+*  their areas of intersection then compares these values to where the student
+*  is standing.
 *
 * Automatic tour path will move camera to east campus and pan west. 
 * After reaching west campus it will begin to pan east again.
 *		T		activates tour
 *		t		stops tour
 *
-* Camera is the source of a spotlight which points towards the center of campus.
+* Camera is the source of a spotlight which points towards the original position
+* of the main student.
 */
 
 #include "stdafx.h"
@@ -45,7 +47,7 @@ int _tmain(int argc, char** argv)
 	glutMouseFunc(mouse);
 	glutKeyboardFunc(keys);
 	glutSpecialFunc(keyboard);
-	//lightInit();
+	lightInit();
 	glEnable(GL_DEPTH_TEST); /* enable z buffer */
 	programInit();
 	glutMainLoop();

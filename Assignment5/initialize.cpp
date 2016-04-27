@@ -12,17 +12,6 @@ int viewInit(void)
 
 int lightInit(void)
 {
-	/* set up ambient, diffuse, and specular components for light 0 (extra light) */
-	GLfloat light_ambient0[] = { 0.2, 0.0, 0.2, 0.5 };
-	GLfloat light_diffuse0[] = { 0.8, 0.0, 0.0, 0.5 };
-	GLfloat light_specular0[] = { 0.0, 0.0, 0.5, 0.2 };
-	GLfloat light_position0[] = { 2.0, 2.0, 2.0, 0.0 };
-
-	glLightfv(GL_LIGHT0, GL_AMBIENT, light_ambient0);
-	glLightfv(GL_LIGHT0, GL_DIFFUSE, light_diffuse0);
-	glLightfv(GL_LIGHT0, GL_SPECULAR, light_specular0);
-	glLightfv(GL_LIGHT0, GL_POSITION, light_position0);
-
 	/* set up ambient, diffuse, and specular components for light 1 (spotlight) */
 	GLfloat light_diffuse1[] = { 1.0, 1.0, 1.0, 1.0 };
 	GLfloat light_position1[] = { -5.5, 0.0, 0.0, 1.0 };
@@ -47,12 +36,13 @@ int lightInit(void)
 	glMaterialfv(GL_FRONT, GL_AMBIENT, mat_ambient);
 	glMaterialfv(GL_FRONT, GL_DIFFUSE, mat_diffuse);
 	glMaterialf(GL_FRONT, GL_SHININESS, mat_shininess);
+	glColorMaterial(GL_FRONT, GL_AMBIENT);
 
 	glShadeModel(GL_SMOOTH); /*enable smooth shading */
 	glEnable(GL_LIGHTING); /* enable lighting */
+	glEnable(GL_COLOR_MATERIAL);
 	glEnable(GL_LIGHT1);
 	glEnable(GL_NORMALIZE);
-	glEnable(GL_DEPTH_TEST); /* enable z buffer */
 
 	glClearColor(1.0, 1.0, 1.0, 1.0);
 	glColor3f(0.0, 0.0, 1.0);

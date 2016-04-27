@@ -216,17 +216,6 @@ void keys(unsigned char key, int x, int y)
 		case 'Z':
 			viewer[2] += 1.0;
 			break;
-		case 'L':
-			setLights();
-			break;
-		case '+':
-			// Should increase brightness
-			// Nothing appears to make any visible difference
-			break;
-		case '-':
-			// Should decrease brightness
-			// Nothing appears to make any visible difference
-			break;
 		case 'T':
 			viewer[0] = 15.0;
 			viewer[1] = 5.0;
@@ -261,34 +250,6 @@ void beginTour()
 }
 
 
-void setLights(void)
-{
-	switch (lightSetting)
-	{
-		case SPOT:
-			lightSetting = EXTRA;
-			glEnable(GL_LIGHT0);
-			glDisable(GL_LIGHT1);
-			break;
-		case EXTRA:
-			lightSetting = BOTH;
-			glEnable(GL_LIGHT0);
-			glEnable(GL_LIGHT1);
-			break;
-		case BOTH:
-			lightSetting = NONE;
-			glDisable(GL_LIGHT0);
-			glDisable(GL_LIGHT1);
-			break;
-		case NONE:
-			lightSetting = SPOT;
-			glDisable(GL_LIGHT0);
-			glEnable(GL_LIGHT1);
-			break;
-		default:
-			break;
-	}
-}
 
 /*
 * myReshape example from book ensures that
