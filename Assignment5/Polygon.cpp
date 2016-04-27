@@ -79,6 +79,6 @@ bool Polygon::isIntersecting(float objectLocation[])
 	if (objectLocation[0] >= xMin && objectLocation[0] < xMax)
 		if (objectLocation[1] >= yMin && objectLocation[1] < yMax)
 			if (objectLocation[2] >= zMin && objectLocation[2] < zMax)
-		return true;
+				return true;
 	return false;
 }

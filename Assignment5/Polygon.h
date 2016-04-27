@@ -24,11 +24,11 @@ private:
 public:
 	Polygon();
 	Polygon(float points[][NUM_POINTS]);
+	bool isIntersecting(float objectLocation[]);
 
 private:
 	void calculateMinAndMax();
 	void compareValues(int value);
-	bool isIntersecting(float objectLocation[]);
 };
 
 #endif

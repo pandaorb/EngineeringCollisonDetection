@@ -6,6 +6,7 @@
 #include <math.h>
 #include "buildings.h"
 #include "people.h"
+#include "Polygon.h"
 
 static GLfloat theta[] = { 0.0, 0.0, 0.0 };
 static GLint axis = 1;
@@ -15,6 +16,9 @@ static GLfloat viewer[] = { 0.0, 15.0, 5.0 };
 static GLfloat light_position[] = { -5.5, 0.0, 0.0, 1.0 };
 enum setting { SPOT, EXTRA, BOTH, NONE };
 static setting lightSetting = SPOT;
+
+//use masterPoly.existingPolygons to get existing polygons
+Polygon masterPoly = Polygon();
 
 
 /*
@@ -152,15 +156,34 @@ void setMovement(GLfloat motion)
 
 /*
 * Causes student to walk in direction he is facing.
-* @args void
-* @return void
+* @args		void
+* @return	void
 */
 void walkForward(void)
 {
 	glPushMatrix();
-	glTranslatef(studentLocation[0], studentLocation[1], studentLocation[2]);
-	glRotatef(studentDirection, 0.0, 1.0, 0.0);
-	
+	if (!isIntersectingObjects()) // only walk if not intersecting
+	{
+		glTranslatef(studentLocation[0], studentLocation[1], studentLocation[2]);
+		glRotatef(studentDirection, 0.0, 1.0, 0.0);
+	}
+}
+
+/*
+ * Checks to see if student is intersecting with anything
+ * while walking
+ * @args	void
+ * @returns	true	student is intersecting
+ * @returns false	student is not intersecting
+ */
+bool isIntersectingObjects(void)
+{
+	for (int i = 0; i < masterPoly.existingPolygons.size(); i++)
+	{
+		if (masterPoly.existingPolygons[i].isIntersecting(studentLocation))
+			return true;
+	}
+	return false;
 }
 
 /*
@@ -204,10 +227,39 @@ void keys(unsigned char key, int x, int y)
 			// Should decrease brightness
 			// Nothing appears to make any visible difference
 			break;
+		case 'T':
+			viewer[0] = 15.0;
+			viewer[1] = 5.0;
+			viewer[2] = 5.0;
+			glutIdleFunc(beginTour);
+			break;
+		case 't':
+			glutIdleFunc(NULL);
+			viewer[0] = 0.0;
+			viewer[1] = 15.0;
+			viewer[2] = 5.0;
+			break;
 		default:
 			break;
 	}
 }
+
+float moveIncrement = 0.2;
+void beginTour()
+{
+	// If you hit max value, go other direction
+	if (viewer[0] <= -18.0)
+	{
+		moveIncrement = 0.1;
+	}
+	else if (viewer[0] >= 15.0)
+	{
+		moveIncrement = -0.1;
+	}
+	viewer[0] += moveIncrement;
+	glutPostRedisplay();
+}
+
 
 void setLights(void)
 {

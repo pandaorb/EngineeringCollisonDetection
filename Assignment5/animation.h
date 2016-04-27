@@ -5,5 +5,7 @@ void setLights(void);
 void myReshape(int w, int h);
 void keyboard(int key, int x, int y);
 void walkForward(void);
+bool isIntersectingObjects(void);
+void beginTour(void);
 void keys(unsigned char key, int x, int y);
 void setMovement(GLfloat motion);

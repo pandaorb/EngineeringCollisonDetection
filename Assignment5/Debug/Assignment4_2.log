@@ -1,9 +1,20 @@
-﻿Build started 4/27/2016 1:18:06 PM.
-     1>Project "C:\Users\Frogger\Documents\Development\Visual Studio 2013\Projects\COMP5400\Assignment5\Assignment5\Assignment4_2.vcxproj" on node 2 (Build target(s)).
+﻿Build started 4/27/2016 5:37:04 PM.
+     1>Project "C:\Users\Frogger\Documents\Development\Visual Studio 2013\Projects\COMP5400\Assignment5\Assignment5\Assignment4_2.vcxproj" on node 2 (Rebuild target(s)).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Assignment4_2.vcxproj).  This can lead to incorrect clean and rebuild behavior.
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Assignment5.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Polygon.cpp shapes.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\Assignment5.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Assignment5.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt animation.cpp broun.cpp buildings.cpp davis.cpp grounds.cpp harbert.cpp initialize.cpp L.cpp main.cpp people.cpp Polygon.cpp ramsay.cpp ross.cpp shapes.cpp shelby.cpp shops.cpp student.cpp textile.cpp wiggins.cpp wilmore.cpp woltosz.cpp
+         woltosz.cpp
+         wilmore.cpp
+         wiggins.cpp
+         textile.cpp
+         student.cpp
+         shops.cpp
+         shelby.cpp
          shapes.cpp
+         ross.cpp
+         ramsay.cpp
          Polygon.cpp
      1>c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\polygon.cpp(1): warning C4627: '#include <float.h>': skipped when looking for precompiled header use
                  Add directive to 'stdafx.h' or rebuild precompiled header
@@ -11,6 +22,19 @@
                  Add directive to 'stdafx.h' or rebuild precompiled header
      1>c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\polygon.cpp(4): warning C4627: '#include <limits>': skipped when looking for precompiled header use
                  Add directive to 'stdafx.h' or rebuild precompiled header
+         people.cpp
+         main.cpp
+         L.cpp
+         initialize.cpp
+         harbert.cpp
+         grounds.cpp
+         davis.cpp
+         buildings.cpp
+         broun.cpp
+         Generating Code...
+         Compiling...
+         animation.cpp
+     1>c:\users\frogger\documents\development\visual studio 2013\projects\comp5400\assignment5\assignment5\animation.cpp(181): warning C4018: '<' : signed/unsigned mismatch
          Generating Code...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Frogger\Documents\Development\Visual Studio 2013\Projects\COMP5400\Assignment5\Debug\Assignment5.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib opengl32.lib glut32.lib glu32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Frogger\Documents\Development\Visual Studio 2013\Projects\COMP5400\Assignment5\Debug\Assignment5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Frogger\Documents\Development\Visual Studio 2013\Projects\COMP5400\Assignment5\Debug\Assignment5.lib" /MACHINE:X86 Debug\animation.obj
@@ -36,8 +60,8 @@
          Debug\wilmore.obj
          Debug\woltosz.obj
          Assignment4_2.vcxproj -> C:\Users\Frogger\Documents\Development\Visual Studio 2013\Projects\COMP5400\Assignment5\Debug\Assignment5.exe
-     1>Done Building Project "C:\Users\Frogger\Documents\Development\Visual Studio 2013\Projects\COMP5400\Assignment5\Assignment5\Assignment4_2.vcxproj" (Build target(s)).
+     1>Done Building Project "C:\Users\Frogger\Documents\Development\Visual Studio 2013\Projects\COMP5400\Assignment5\Assignment5\Assignment4_2.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.93
+Time Elapsed 00:00:02.54

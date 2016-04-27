@@ -5,7 +5,9 @@
 *		UP		moves student forward
 *		RIGHT	rotates student clockwise
 *		LEFT	rotates student counter-clockwise
+* 
 * Clicking the right mouse button will spin the world about the y-axis.
+*
 * Keystrokes will move the camera as follows:
 *		X		moves camera in positive x direction
 *		x		moves camera in negative x direction
@@ -13,10 +15,18 @@
 *		y		moves camera in negative y direction
 *		Z		moves camera in positive Z direction
 *		z		moves camera in negative z direction
-* According to specifications, the spotlight will move as the student moves.
-* The 'L' keystroke will cycle from spotlight only to extra light only to 
-* both lights and then to no lights. I was unable to get the '+' and '-' 
-* keystrokes to make any visible differences in brightness. 
+*																				   ()()
+* Collision Avoidance not really working. Although I'm sure my logic is flawless.  (o_o)
+* (Mostly located in Polygon.cpp, but some intersection checking occurs in		 //(   )\\
+*  animation.cpp as well.) Maintains a list of existing polygons and calculates	    //\\
+*  their areas of intersection.
+*
+* Automatic tour path will move camera to east campus and pan west. 
+* After reaching west campus it will begin to pan east again.
+*		T		activates tour
+*		t		stops tour
+*
+* Camera is the source of a spotlight which points towards the center of campus.
 */
 
 #include "stdafx.h"
