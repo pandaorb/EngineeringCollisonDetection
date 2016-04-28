@@ -29,6 +29,14 @@
 *
 * Camera is the source of a spotlight which points towards the original position
 * of the main student.
+*
+*  An Atari eagle can fly across campus at the command of the user.
+*		w		moves eagle up
+*		s		moves eagle down
+*		a		moves eagle left
+*		d		moves eagle right
+*		q		moves eagle back
+*		e		moves eagle forward
 */
 
 #include "stdafx.h"

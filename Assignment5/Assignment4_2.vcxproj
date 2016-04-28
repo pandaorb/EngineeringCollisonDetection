@@ -83,6 +83,7 @@
   <ItemGroup>
     <ClInclude Include="animation.h" />
     <ClInclude Include="buildings.h" />
+    <ClInclude Include="eagle.h" />
     <ClInclude Include="initialize.h" />
     <ClInclude Include="people.h" />
     <ClInclude Include="Polygon.h" />
@@ -96,6 +97,7 @@
     <ClCompile Include="broun.cpp" />
     <ClCompile Include="buildings.cpp" />
     <ClCompile Include="davis.cpp" />
+    <ClCompile Include="eagle.cpp" />
     <ClCompile Include="grounds.cpp" />
     <ClCompile Include="harbert.cpp" />
     <ClCompile Include="initialize.cpp" />

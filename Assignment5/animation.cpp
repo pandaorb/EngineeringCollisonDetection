@@ -7,13 +7,14 @@
 #include "buildings.h"
 #include "people.h"
 #include "Polygon.h"
+#include "eagle.h"
 
 static GLfloat theta[] = { 0.0, 0.0, 0.0 };
 static GLint axis = 1;
 static GLfloat studentLocation[] = { -5.5, 0.0, 0.0 };
+static GLfloat eagleLocation[] = {5.0, 10.0, 4.0};
 static GLfloat studentDirection = 0.0;
 static GLfloat viewer[] = { 0.0, 15.0, 5.0 };
-static GLfloat light_position[] = { -5.5, 0.0, 0.0, 1.0 };
 enum setting { SPOT, EXTRA, BOTH, NONE };
 static setting lightSetting = SPOT;
 
@@ -30,7 +31,6 @@ void display(void)
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glLoadIdentity();
-	glLightfv(GL_LIGHT1, GL_POSITION, light_position);
 	gluLookAt(viewer[0], viewer[1], viewer[2], 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
 	
 	glRotatef(theta[0], 1.0, 0.0, 0.0);
@@ -41,6 +41,9 @@ void display(void)
 	
 	glColor3f((145.0 / 255.0), (10.0 / 255.0), (10.0 / 255.0));
 	drawCampus();
+
+	flyForward();
+	drawEagle();
 
 	walkForward();
 	drawStudent();
@@ -133,25 +136,27 @@ void setMovement(GLfloat motion)
 	{
 		//facing mostly downwards, move down
 		studentLocation[2] += motion;
-		light_position[2] = studentLocation[2];
 	}
 	else if (studentDirection >= 45 && studentDirection < 135)
 	{
 		//facing mostly right, move right
 		studentLocation[0] += motion;
-		light_position[0] = studentLocation[0];
 	}
 	else if (studentDirection >= 135 && studentDirection < 215)
 	{
 		//facing mostly left, move left
 		studentLocation[2] -= motion;
-		light_position[2] = studentLocation[2];
 	}
 	else if (studentDirection >= 225 && studentDirection < 315)
 	{
 		studentLocation[0] -= motion;
-		light_position[0] = studentLocation[0];
 	}
+}
+
+void flyForward(void)
+{
+	glPushMatrix();
+	glTranslatef(eagleLocation[0], eagleLocation[1], eagleLocation[2]);
 }
 
 /*
@@ -195,6 +200,7 @@ bool isIntersectingObjects(void)
  */
 void keys(unsigned char key, int x, int y)
 {
+	GLfloat eagleMotion = 0.5;
 	switch (key)
 	{
 		
@@ -227,6 +233,24 @@ void keys(unsigned char key, int x, int y)
 			viewer[0] = 0.0;
 			viewer[1] = 15.0;
 			viewer[2] = 5.0;
+			break;
+		case 'w':
+			eagleLocation[1] += eagleMotion;
+			break;
+		case 's':
+			eagleLocation[1] -= eagleMotion;
+			break;
+		case 'a':
+			eagleLocation[0] -= eagleMotion;
+			break;
+		case 'd':
+			eagleLocation[0] += eagleMotion;
+			break;
+		case 'q':
+			eagleLocation[2] -= eagleMotion;
+			break;
+		case 'e':
+			eagleLocation[2] += eagleMotion;
 			break;
 		default:
 			break;
